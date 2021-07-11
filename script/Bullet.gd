@@ -6,3 +6,5 @@ func _on_Bullet_body_entered(body):
 		explosion_instance.position = get_global_position()
 		get_tree().get_root().add_child(explosion_instance)
 		queue_free()
+
+#close enough
