@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/M484ExplosionSet1.png-a1fb3af0d507ae60a1556dddaf821121.stex"
+path="res://.import/5. tiles.png-6e5d43fdbe3afbbccfd78a368bc158c7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Explosion/M484ExplosionSet1.png"
-dest_files=[ "res://.import/M484ExplosionSet1.png-a1fb3af0d507ae60a1556dddaf821121.stex" ]
+source_file="res://Assets/Tiles/5. tiles.png"
+dest_files=[ "res://.import/5. tiles.png-6e5d43fdbe3afbbccfd78a368bc158c7.stex" ]
 
 [params]
 

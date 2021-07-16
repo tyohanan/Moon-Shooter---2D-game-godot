@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Assets/used Gun - Bullet/M484BulletCollection1.png" type="Texture" id=1]
+[ext_resource path="res://Assets/used Gun - Bullet/3. bullet.png" type="Texture" id=1]
 [ext_resource path="res://script/Bullet.gd" type="Script" id=2]
 [ext_resource path="res://scene/Hitbox.tscn" type="PackedScene" id=3]
 

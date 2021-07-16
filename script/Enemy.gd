@@ -68,6 +68,9 @@ func _physics_process(delta):
 	else :
 		animationState.travel("Idle")
 	
+
+
+	
 #function to keep track wander time
 func _on_WanderTimer_timeout():
 	if state != CHASE:

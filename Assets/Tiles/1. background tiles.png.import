@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Sprite-0002.png-55c8517ad5b36756a97cbe81737db631.stex"
+path="res://.import/1. background tiles.png-6cb9b58123c969f86f5dad336be7abe0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Explosion/Sprite-0002.png"
-dest_files=[ "res://.import/Sprite-0002.png-55c8517ad5b36756a97cbe81737db631.stex" ]
+source_file="res://Assets/Tiles/1. background tiles.png"
+dest_files=[ "res://.import/1. background tiles.png-6cb9b58123c969f86f5dad336be7abe0.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/thunder.png-d12bca139f6bc73aa9f1007b851b6e9f.stex"
+path="res://.import/1. thunder skills.png-30beba4c1a13c81dbb2d56259126ec38.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/power/thunder.png"
-dest_files=[ "res://.import/thunder.png-d12bca139f6bc73aa9f1007b851b6e9f.stex" ]
+source_file="res://Assets/power/1. thunder skills.png"
+dest_files=[ "res://.import/1. thunder skills.png-30beba4c1a13c81dbb2d56259126ec38.stex" ]
 
 [params]
 

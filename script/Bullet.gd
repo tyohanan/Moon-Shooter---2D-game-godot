@@ -7,4 +7,3 @@ func _on_Bullet_body_entered(body):
 		get_tree().get_root().add_child(explosion_instance)
 		queue_free()
 
-#close enough

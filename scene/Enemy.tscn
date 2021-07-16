@@ -1,7 +1,7 @@
 [gd_scene load_steps=31 format=2]
 
-[ext_resource path="res://Assets/enemy.png" type="Texture" id=1]
-[ext_resource path="res://Assets/MediumShadow.png" type="Texture" id=2]
+[ext_resource path="res://Assets/1. enemy.png" type="Texture" id=1]
+[ext_resource path="res://Assets/4. medium shadow.png" type="Texture" id=2]
 [ext_resource path="res://script/Enemy.gd" type="Script" id=3]
 [ext_resource path="res://scene/StatsHealth.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scene/Hurtbox.tscn" type="PackedScene" id=5]
@@ -195,14 +195,14 @@ tracks/0/keys = {
 }
 
 [sub_resource type="CircleShape2D" id=24]
-radius = 32.5087
+radius = 38.8131
 
 [sub_resource type="CircleShape2D" id=25]
 radius = 8.13068
 
 [node name="Enemy" type="KinematicBody2D"]
+position = Vector2( 0, -4 )
 collision_layer = 16
-collision_mask = 16
 script = ExtResource( 3 )
 
 [node name="enemyCollision" type="CollisionShape2D" parent="."]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Assets/Sprite-0001.png" type="Texture" id=1]
-[ext_resource path="res://Assets/Tiles/Sprite-0002.png" type="Texture" id=2]
+[ext_resource path="res://Assets/6. frame maps.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Props/3. grass.png" type="Texture" id=2]
 [ext_resource path="res://script/Minimap.gd" type="Script" id=3]
 
 [node name="Minimap" type="MarginContainer"]

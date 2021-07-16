@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Assets/Explosion/3. explosion.png" type="Texture" id=1]
+[ext_resource path="res://script/Explosion.gd" type="Script" id=2]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 1 )
+region = Rect2( 16, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 1 )
+region = Rect2( 32, 0, 16, 16 )
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+} ]
+
+[node name="GrassDestroyed" type="AnimatedSprite"]
+position = Vector2( 8, 8 )
+frames = SubResource( 4 )
+frame = 2
+playing = true
+script = ExtResource( 2 )
+
+[connection signal="animation_finished" from="." to="." method="_on_GrassDestroyed_animation_finished"]

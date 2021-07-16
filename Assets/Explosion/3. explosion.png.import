@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/SmallShadow.png-528ef3e051b7e0acb31fca2dce1c1f6d.stex"
+path="res://.import/3. explosion.png-bd54485fcf194a4a14615ab8d9ccf093.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/SmallShadow.png"
-dest_files=[ "res://.import/SmallShadow.png-528ef3e051b7e0acb31fca2dce1c1f6d.stex" ]
+source_file="res://Assets/Explosion/3. explosion.png"
+dest_files=[ "res://.import/3. explosion.png-bd54485fcf194a4a14615ab8d9ccf093.stex" ]
 
 [params]
 
