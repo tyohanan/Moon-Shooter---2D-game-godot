@@ -23,7 +23,7 @@ onready var initial_position = global_position
 onready var playerSprite = $playerSprite
 onready var wanderTimer = $WanderTimer
 onready var animationTree = $AnimationTree
-onready var statsBat = $StatsHealth
+onready var statsHealth = $StatsHealth
 onready var hurtbox = $Hurtbox
 
 onready var animationState = animationTree.get("parameters/playback")
@@ -56,7 +56,8 @@ func _physics_process(delta):
 			velocity = move_and_slide(velocity)
 			
 		ATTACK:
-			pass
+			direction = direction.move_toward(Vector2.ZERO, 100 * delta)
+			direction = move_and_slide(direction)
 		
 			
 	#function to play animation state in enemy
@@ -85,19 +86,29 @@ func _on_PlayerDetectionZone_body_exited(_body):
 	player = null
 
 
+#jika stats health sudah nol maka hapus player
 func _on_StatsHealth_no_health():
 	queue_free()
-	var death = Global.deathExplosion.instance()
+	var death = Global.enemyDeath.instance()
 	get_parent().add_child(death)
 	death.global_position = global_position
 	
 
-
+#jika damage terkena pada musuh
 func _on_Hurtbox_area_entered(area):
-	statsBat.health -= area.damage
+	statsHealth.health -= area.damage
 	hurtbox.start_invincibility(0.4)
+	#menginstantiate floating text
 	var text = Global.floatingText.instance()
 	text.amount = area.damage
 	text.type = "Damage"
 	get_parent().add_child(text)
 	text.global_position = global_position
+
+
+func _on_GunFiringZone_body_entered(_body):
+	state = ATTACK
+
+
+func _on_GunFiringZone_body_exited(_body):
+	state = CHASE

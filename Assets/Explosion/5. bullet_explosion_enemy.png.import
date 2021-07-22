@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/1. explosion.png-9114ffd9a9fe69032631ed8d4909d400.stex"
+path="res://.import/5. bullet_explosion_enemy.png-5b54ff57b2650c8db7ca04cf2a413d40.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Explosion/1. explosion.png"
-dest_files=[ "res://.import/1. explosion.png-9114ffd9a9fe69032631ed8d4909d400.stex" ]
+source_file="res://Assets/Explosion/5. bullet_explosion_enemy.png"
+dest_files=[ "res://.import/5. bullet_explosion_enemy.png-5b54ff57b2650c8db7ca04cf2a413d40.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

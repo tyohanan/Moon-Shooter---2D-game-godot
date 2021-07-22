@@ -10,7 +10,6 @@ var velocity = Vector2.ZERO
 onready var AnimPlayer = $AnimationPlayer
 onready var animationTree = $AnimationTree
 onready var animationState = animationTree.get("parameters/playback")
-onready var hurtbox = $Hurtbox
 	
 func _ready():
 	animationTree.active = true

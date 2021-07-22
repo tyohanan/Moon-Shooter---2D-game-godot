@@ -1,23 +1,23 @@
 extends Position2D
 
 var can_fire = true
-var enemy = null
+var player = null
 
-export var speed = 100
-export var bullet_speed = 1000
-export var fire_rate = 0.2
+export var speed = 80
+export var bullet_speed = 300
+export var fire_rate = 0.3
 
 onready var GunPoint = $Gun/GunPoint
 onready var GunSprite = $Gun
 
 func _process(_delta):
-	#mengecek apakah ada enemy di sekitar player kemudian rotasi
-	if enemy != null:
-		look_at(enemy.global_position)
-	
+	#mengecek apakah ada player di sekitar player kemudian rotasi
+	if player != null:
+		look_at(player.global_position)
+		
 	#program menembak enemynya
-	if Input.is_action_pressed("fire") and can_fire:
-		var bullet_instance = Global.bulletPlayer.instance()
+	if can_fire and player!= null:
+		var bullet_instance = Global.bulletEnemy.instance()
 		var gunSmoke = Global.gunSmoke.instance()
 		
 		gunSmoke.position = GunPoint.get_global_position()
@@ -56,7 +56,7 @@ func checking_quadrant():
 		Q4:
 			GunSprite.flip_v = false		
 	
-	if enemy != null:
+	if player != null:
 		if rotation_degrees > 0  and rotation_degrees < 90:
 			quadrant = Q1
 		elif rotation_degrees > 90 and rotation_degrees < 180:
@@ -75,7 +75,7 @@ func checking_quadrant():
 			quadrant = Q1
 			
 	#mengeflip gunsprite waktu player berjalan ke kiri atau ke kanan
-	elif enemy == null:
+	elif player == null:
 		if Input.is_action_pressed("ui_left"):
 			rotation_degrees = 180
 			quadrant = Q3
@@ -86,18 +86,11 @@ func checking_quadrant():
 	else :
 		quadrant = Q1
 		rotation_degrees = 0
-	
-	#mengeflip gunsprite waktu player berjalan ke kiri atau ke kanan
-#	if Input.is_action_just_pressed("ui_left") && enemy == null:
-#		rotation_degrees = 180
-#		quadrant = Q3
-#
-#	elif Input.is_action_just_pressed("ui_right") && enemy == null:
-#		rotation_degrees = 0
-#		quadrant = Q1
 
-func _on_enemyDetection_body_entered(body):
-	enemy = body
 
-func _on_enemyDetection_body_exited(_body):
-	enemy = null
+func _on_playerDetection_body_entered(body):
+	player = body
+
+
+func _on_playerDetection_body_exited(_body):
+	player = null

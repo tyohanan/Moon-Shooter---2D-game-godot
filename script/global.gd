@@ -1,8 +1,16 @@
 extends Node
 
-var bullet = preload ("res://scene/Bullet.tscn")
-var explosion = preload ("res://scene/Explosion.tscn")
-var gunExplosion = preload ("res://scene/gunExplosion.tscn")
-var deathExplosion = preload ("res://scene/DeathExplosion.tscn")
+#for general
 var floatingText = preload ("res://scene/FloatingText.tscn")
 var GrassDestroyed = preload ("res://scene/GrassDestroyed.tscn")
+var gunSmoke = preload ("res://scene/Gun and Power/gunExplosion.tscn")
+
+
+#for player
+var bulletPlayer = preload ("res://scene/Gun and Power/BulletPlayer.tscn")
+var explosionPlayer = preload ("res://scene/Gun and Power/GunExplosionPlayer.tscn")
+
+#for enemy
+var bulletEnemy = preload ("res://scene/Gun and Power/BulletEnemy.tscn")
+var explosionEnemy = preload ("res://scene/Gun and Power/GunExplosionPlayer.tscn")
+var enemyDeath = preload ("res://scene/Gun and Power/DeathExplosion.tscn")

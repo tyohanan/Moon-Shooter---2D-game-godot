@@ -9,6 +9,10 @@ onready var timer = $InvicibilityTimer
 signal invincibility_started
 signal invincibility_ended
 
+func _ready():
+	monitorable = true
+	monitoring = true
+
 func set_invincible(value):
 	invincible = value
 	if (invincible == true):
