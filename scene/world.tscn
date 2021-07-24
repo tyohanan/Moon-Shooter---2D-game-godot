@@ -1077,7 +1077,10 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 0/z_index = 0
 
-[node name="Level0" type="Node2D"]
+[node name="level 1" type="Node2D"]
+__meta__ = {
+"_editor_description_": ""
+}
 
 [node name="background" type="Sprite" parent="."]
 position = Vector2( 320, 632 )
@@ -1260,6 +1263,108 @@ position = Vector2( 96, 96 )
 
 [node name="Grass4" parent="Ysort/Grasses" instance=ExtResource( 8 )]
 position = Vector2( 112, 96 )
+
+[node name="Grass25" parent="Ysort/Grasses" instance=ExtResource( 8 )]
+position = Vector2( 112, 128 )
+
+[node name="Grass26" parent="Ysort/Grasses" instance=ExtResource( 8 )]
+position = Vector2( 112, 144 )
+
+[node name="Grass27" parent="Ysort/Grasses" instance=ExtResource( 8 )]
+position = Vector2( 112, 160 )
+
+[node name="Grass28" parent="Ysort/Grasses" instance=ExtResource( 8 )]
+position = Vector2( 112, 176 )
+
+[node name="Grass29" parent="Ysort/Grasses" instance=ExtResource( 8 )]
+position = Vector2( 160, 192 )
+
+[node name="Grass30" parent="Ysort/Grasses" instance=ExtResource( 8 )]
+position = Vector2( 144, 232 )
+
+[node name="Grass31" parent="Ysort/Grasses" instance=ExtResource( 8 )]
+position = Vector2( 144, 248 )
+
+[node name="Grass32" parent="Ysort/Grasses" instance=ExtResource( 8 )]
+position = Vector2( 200, 248 )
+
+[node name="Grass33" parent="Ysort/Grasses" instance=ExtResource( 8 )]
+position = Vector2( 216, 288 )
+
+[node name="Grass34" parent="Ysort/Grasses" instance=ExtResource( 8 )]
+position = Vector2( 160, 264 )
+
+[node name="Grass35" parent="Ysort/Grasses" instance=ExtResource( 8 )]
+position = Vector2( 144, 264 )
+
+[node name="Grass36" parent="Ysort/Grasses" instance=ExtResource( 8 )]
+position = Vector2( 176, 264 )
+
+[node name="Grass37" parent="Ysort/Grasses" instance=ExtResource( 8 )]
+position = Vector2( 248, 264 )
+
+[node name="Grass38" parent="Ysort/Grasses" instance=ExtResource( 8 )]
+position = Vector2( 232, 264 )
+
+[node name="Grass39" parent="Ysort/Grasses" instance=ExtResource( 8 )]
+position = Vector2( 16, 328 )
+
+[node name="Grass40" parent="Ysort/Grasses" instance=ExtResource( 8 )]
+position = Vector2( 0, 328 )
+
+[node name="Grass41" parent="Ysort/Grasses" instance=ExtResource( 8 )]
+position = Vector2( 304, 408 )
+
+[node name="Grass42" parent="Ysort/Grasses" instance=ExtResource( 8 )]
+position = Vector2( 288, 408 )
+
+[node name="Grass43" parent="Ysort/Grasses" instance=ExtResource( 8 )]
+position = Vector2( 368, 392 )
+
+[node name="Grass44" parent="Ysort/Grasses" instance=ExtResource( 8 )]
+position = Vector2( 368, 376 )
+
+[node name="Grass45" parent="Ysort/Grasses" instance=ExtResource( 8 )]
+position = Vector2( 432, 368 )
+
+[node name="Grass46" parent="Ysort/Grasses" instance=ExtResource( 8 )]
+position = Vector2( 416, 368 )
+
+[node name="Grass47" parent="Ysort/Grasses" instance=ExtResource( 8 )]
+position = Vector2( 432, 384 )
+
+[node name="Grass48" parent="Ysort/Grasses" instance=ExtResource( 8 )]
+position = Vector2( 416, 384 )
+
+[node name="Grass49" parent="Ysort/Grasses" instance=ExtResource( 8 )]
+position = Vector2( 408, 224 )
+
+[node name="Grass50" parent="Ysort/Grasses" instance=ExtResource( 8 )]
+position = Vector2( 424, 224 )
+
+[node name="Grass51" parent="Ysort/Grasses" instance=ExtResource( 8 )]
+position = Vector2( 440, 224 )
+
+[node name="Grass52" parent="Ysort/Grasses" instance=ExtResource( 8 )]
+position = Vector2( 392, 224 )
+
+[node name="Grass53" parent="Ysort/Grasses" instance=ExtResource( 8 )]
+position = Vector2( 392, 240 )
+
+[node name="Grass54" parent="Ysort/Grasses" instance=ExtResource( 8 )]
+position = Vector2( 408, 240 )
+
+[node name="Grass55" parent="Ysort/Grasses" instance=ExtResource( 8 )]
+position = Vector2( 424, 240 )
+
+[node name="Grass56" parent="Ysort/Grasses" instance=ExtResource( 8 )]
+position = Vector2( 440, 240 )
+
+[node name="Grass57" parent="Ysort/Grasses" instance=ExtResource( 8 )]
+position = Vector2( 416, 208 )
+
+[node name="Grass58" parent="Ysort/Grasses" instance=ExtResource( 8 )]
+position = Vector2( 440, 208 )
 
 [editable path="Ysort/Trees/Tree2"]
 [editable path="Ysort/Trees/Tree7"]

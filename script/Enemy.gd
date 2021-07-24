@@ -25,11 +25,14 @@ onready var wanderTimer = $WanderTimer
 onready var animationTree = $AnimationTree
 onready var statsHealth = $StatsHealth
 onready var hurtbox = $Hurtbox
+onready var hpbar = $HpBar
+onready var tweenHpbar = $HpBar/Tween
 
 onready var animationState = animationTree.get("parameters/playback")
 
 func _ready():
 	animationTree.active = true
+
 	
 func _physics_process(delta):
 	match state:
@@ -68,9 +71,7 @@ func _physics_process(delta):
 		animationState.travel("Run")
 	else :
 		animationState.travel("Idle")
-	
-
-
+		
 	
 #function to keep track wander time
 func _on_WanderTimer_timeout():
@@ -98,17 +99,30 @@ func _on_StatsHealth_no_health():
 func _on_Hurtbox_area_entered(area):
 	statsHealth.health -= area.damage
 	hurtbox.start_invincibility(0.4)
+	
 	#menginstantiate floating text
 	var text = Global.floatingText.instance()
 	text.amount = area.damage
 	text.type = "Damage"
 	get_parent().add_child(text)
-	text.global_position = global_position
+	text.global_position = area.global_position
 
+	#calling healthbar function
+	healthbar()
+		
+func healthbar():
+	var percentage = int(float(statsHealth.health)/statsHealth.max_health*100)
+	tweenHpbar.interpolate_property(hpbar, "value", hpbar.value, percentage, 0.3, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT, 0)
+	tweenHpbar.start()
+	if percentage > 80:
+		hpbar.tint_progress = "02cc00"
+	elif percentage <= 80 and percentage >30:
+		hpbar.tint_progress = "cc6e00"
+	else : 
+		hpbar.tint_progress = "cc0000"
 
 func _on_GunFiringZone_body_entered(_body):
 	state = ATTACK
-
 
 func _on_GunFiringZone_body_exited(_body):
 	state = CHASE

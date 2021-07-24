@@ -37,9 +37,8 @@ animations = [ {
 
 [node name="gunExplosion" type="AnimatedSprite"]
 scale = Vector2( 0.2, 0.2 )
-z_index = 1
 frames = SubResource( 7 )
-frame = 2
+frame = 5
 speed_scale = 4.0
 playing = true
 script = ExtResource( 1 )

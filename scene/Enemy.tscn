@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://Assets/1. enemy.png" type="Texture" id=1]
 [ext_resource path="res://Assets/4. medium shadow.png" type="Texture" id=2]
@@ -6,6 +6,8 @@
 [ext_resource path="res://scene/StatsHealth.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scene/Hurtbox.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scene/Gun and Power/GunPivotEnemy.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Assets/character/1. healthbar.png" type="Texture" id=7]
+[ext_resource path="res://Assets/character/2. progress.png" type="Texture" id=8]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 3.80233
@@ -229,6 +231,7 @@ hframes = 10
 [node name="WanderTimer" type="Timer" parent="."]
 
 [node name="PlayerDetectionZone" type="Area2D" parent="."]
+visible = false
 position = Vector2( 0, -3 )
 collision_layer = 0
 collision_mask = 2
@@ -244,9 +247,6 @@ collision_mask = 0
 [node name="CollisionShape2D" parent="Hurtbox" index="0"]
 rotation = 1.57079
 shape = SubResource( 3 )
-
-[node name="StatsHealth" parent="." instance=ExtResource( 4 )]
-max_health = 4
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource( 16 )
@@ -271,16 +271,42 @@ position = Vector2( 0, -3 )
 [node name="Gun" parent="GunPivotEnemy" index="0"]
 position = Vector2( -0.00574017, 0 )
 
+[node name="GunFiringZone" parent="GunPivotEnemy" index="1"]
+visible = false
+
 [node name="CollisionShape2D" parent="GunPivotEnemy/GunFiringZone" index="0"]
 shape = SubResource( 26 )
+
+[node name="StatsHealth" parent="." instance=ExtResource( 4 )]
+
+[node name="HpBar" type="TextureProgress" parent="."]
+margin_left = -5.81729
+margin_top = -17.0561
+margin_right = 18.1827
+margin_bottom = -9.05612
+rect_scale = Vector2( 0.5, 0.5 )
+value = 100.0
+texture_under = ExtResource( 8 )
+texture_over = ExtResource( 7 )
+texture_progress = ExtResource( 8 )
+tint_over = Color( 0, 0, 0, 1 )
+tint_progress = Color( 0.0980392, 0.65098, 0, 1 )
+nine_patch_stretch = true
+stretch_margin_left = 1
+stretch_margin_right = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="HpBar"]
 
 [connection signal="timeout" from="WanderTimer" to="." method="_on_WanderTimer_timeout"]
 [connection signal="body_entered" from="PlayerDetectionZone" to="." method="_on_PlayerDetectionZone_body_entered"]
 [connection signal="body_exited" from="PlayerDetectionZone" to="." method="_on_PlayerDetectionZone_body_exited"]
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
-[connection signal="no_health" from="StatsHealth" to="." method="_on_StatsHealth_no_health"]
 [connection signal="body_entered" from="GunPivotEnemy/GunFiringZone" to="." method="_on_GunFiringZone_body_entered"]
 [connection signal="body_exited" from="GunPivotEnemy/GunFiringZone" to="." method="_on_GunFiringZone_body_exited"]
+[connection signal="no_health" from="StatsHealth" to="." method="_on_StatsHealth_no_health"]
 
 [editable path="Hurtbox"]
 [editable path="GunPivotEnemy"]
