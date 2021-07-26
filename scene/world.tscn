@@ -1,4 +1,4 @@
-[gd_scene load_steps=114 format=2]
+[gd_scene load_steps=115 format=2]
 
 [ext_resource path="res://scene/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scene/Tree.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Assets/Tiles/4. tiles.png" type="Texture" id=6]
 [ext_resource path="res://scene/Enemy.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scene/Grass.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Level/level1.gd" type="Script" id=9]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -1078,6 +1079,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 0/z_index = 0
 
 [node name="level 1" type="Node2D"]
+script = ExtResource( 9 )
 __meta__ = {
 "_editor_description_": ""
 }
