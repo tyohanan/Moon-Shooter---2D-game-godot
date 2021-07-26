@@ -9,7 +9,6 @@ export var fire_rate = 0.2
 
 onready var GunPoint = $Gun/GunPoint
 onready var GunSprite = $Gun
-onready var EnemyAreaDetection = $enemyDetection 
 
 func _process(_delta):
 	#mengecek apakah ada enemy di sekitar player kemudian rotasi
@@ -36,10 +35,6 @@ func _process(_delta):
 		
 	#memanggil fungsi quadrant rotasi senjata
 	checking_quadrant()
-	
-	#checking how much body overlapping in the area
-	var bodies = EnemyAreaDetection.get_overlapping_bodies()
-	print (bodies)
 
 
 #mengecek gun sekarang masuk quadrant berapa kemudian diputar sesuai quadrant yg dimiliki

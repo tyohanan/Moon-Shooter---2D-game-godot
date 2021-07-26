@@ -14,6 +14,3 @@ var explosionPlayer = preload ("res://scene/Gun and Power/GunExplosionPlayer.tsc
 var bulletEnemy = preload ("res://scene/Gun and Power/BulletEnemy.tscn")
 var explosionEnemy = preload ("res://scene/Gun and Power/GunExplosionEnemy.tscn")
 var enemyDeath = preload ("res://scene/Gun and Power/DeathExplosion.tscn")
-
-#debugging
-var debug_overlay = preload("res://scene/debug_overlay.tscn")
