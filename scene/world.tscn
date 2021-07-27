@@ -1126,7 +1126,7 @@ remote_path = NodePath("../../../Camera2D")
 [node name="Trees" type="YSort" parent="Ysort"]
 
 [node name="Tree" parent="Ysort/Trees" instance=ExtResource( 2 )]
-position = Vector2( 112, 24 )
+position = Vector2( 168, 72 )
 
 [node name="Tree8" parent="Ysort/Trees" instance=ExtResource( 2 )]
 position = Vector2( 376, 568 )
@@ -1141,7 +1141,7 @@ position = Vector2( 336, 368 )
 position = Vector2( 456, 336 )
 
 [node name="Tree2" parent="Ysort/Trees" instance=ExtResource( 2 )]
-position = Vector2( 168, 88 )
+position = Vector2( 176, 40 )
 
 [node name="Tree" parent="Ysort/Trees/Tree2" index="1"]
 frame = 0
@@ -1161,7 +1161,7 @@ frame = 0
 [node name="Enemies" type="YSort" parent="Ysort"]
 
 [node name="Enemy" parent="Ysort/Enemies" instance=ExtResource( 7 )]
-position = Vector2( 176, 48 )
+position = Vector2( 200, 200 )
 collision_mask = 17
 
 [node name="Enemy2" parent="Ysort/Enemies" instance=ExtResource( 7 )]
@@ -1169,7 +1169,7 @@ position = Vector2( 144, 200 )
 collision_mask = 17
 
 [node name="Enemy3" parent="Ysort/Enemies" instance=ExtResource( 7 )]
-position = Vector2( 232, 224 )
+position = Vector2( 240, 208 )
 collision_mask = 17
 
 [node name="Enemy4" parent="Ysort/Enemies" instance=ExtResource( 7 )]
@@ -1213,10 +1213,10 @@ position = Vector2( 80, 64 )
 position = Vector2( 80, 80 )
 
 [node name="Grass9" parent="Ysort/Grasses" instance=ExtResource( 8 )]
-position = Vector2( 80, 96 )
+position = Vector2( 208, 64 )
 
 [node name="Grass10" parent="Ysort/Grasses" instance=ExtResource( 8 )]
-position = Vector2( 128, 96 )
+position = Vector2( 192, 112 )
 
 [node name="Grass11" parent="Ysort/Grasses" instance=ExtResource( 8 )]
 position = Vector2( 128, 80 )
@@ -1237,16 +1237,16 @@ position = Vector2( 96, 48 )
 position = Vector2( 80, 48 )
 
 [node name="Grass17" parent="Ysort/Grasses" instance=ExtResource( 8 )]
-position = Vector2( 176, 48 )
+position = Vector2( 112, 112 )
 
 [node name="Grass18" parent="Ysort/Grasses" instance=ExtResource( 8 )]
-position = Vector2( 176, 32 )
+position = Vector2( 40, 80 )
 
 [node name="Grass19" parent="Ysort/Grasses" instance=ExtResource( 8 )]
-position = Vector2( 160, 32 )
+position = Vector2( 40, 48 )
 
 [node name="Grass20" parent="Ysort/Grasses" instance=ExtResource( 8 )]
-position = Vector2( 160, 48 )
+position = Vector2( 40, 64 )
 
 [node name="Grass21" parent="Ysort/Grasses" instance=ExtResource( 8 )]
 position = Vector2( 192, 80 )
@@ -1261,10 +1261,10 @@ position = Vector2( 208, 96 )
 position = Vector2( 208, 80 )
 
 [node name="Grass3" parent="Ysort/Grasses" instance=ExtResource( 8 )]
-position = Vector2( 96, 96 )
+position = Vector2( 192, 64 )
 
 [node name="Grass4" parent="Ysort/Grasses" instance=ExtResource( 8 )]
-position = Vector2( 112, 96 )
+position = Vector2( 208, 112 )
 
 [node name="Grass25" parent="Ysort/Grasses" instance=ExtResource( 8 )]
 position = Vector2( 112, 128 )

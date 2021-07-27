@@ -32,10 +32,10 @@ func _process(_delta):
 		can_fire = false
 		yield(get_tree().create_timer(fire_rate), "timeout")
 		can_fire = true
-		
+	
 	#memanggil fungsi quadrant rotasi senjata
 	checking_quadrant()
-
+	
 
 #mengecek gun sekarang masuk quadrant berapa kemudian diputar sesuai quadrant yg dimiliki
 enum{
@@ -44,6 +44,8 @@ enum{
 	Q3,
 	Q4
 }
+
+
 var quadrant = Q1
 func checking_quadrant():
 	match quadrant:

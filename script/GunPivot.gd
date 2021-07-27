@@ -15,7 +15,7 @@ func _process(_delta):
 	#mengecek apakah ada enemy di sekitar player kemudian rotasi
 	if enemy != null:
 		look_at(enemy.global_position)
-	
+		
 	#program menembak enemynya
 	if Input.is_action_pressed("fire") and can_fire:
 		var bullet_instance = Global.bulletPlayer.instance()
@@ -39,58 +39,67 @@ func _process(_delta):
 	
 	#checking how much body overlapping in the area
 	var bodies = EnemyAreaDetection.get_overlapping_bodies()
-	print (bodies)
 
 
 #mengecek gun sekarang masuk quadrant berapa kemudian diputar sesuai quadrant yg dimiliki
-enum{
-	Q1,
-	Q2,
-	Q3,
-	Q4
-}
-var quadrant = Q1
+#enum{
+#	Q1,
+#	Q2,
+#	Q3,
+#	Q4
+#}
+#var quadrant = Q1
+#func checking_quadrant():
+#	match quadrant:
+#		Q1:
+#			GunSprite.flip_v = false
+#		Q2:
+#			GunSprite.flip_v = true
+#		Q3:
+#			GunSprite.flip_v  = true
+#		Q4:
+#			GunSprite.flip_v = false		
+#
+#	if enemy != null:
+#		if rotation_degrees > 0  and rotation_degrees < 90:
+#			quadrant = Q1
+#		elif rotation_degrees > 90 and rotation_degrees < 180:
+#			quadrant = Q2
+#		elif rotation_degrees > 180 and rotation_degrees < 270:
+#			quadrant = Q3
+#		elif rotation_degrees > 270 and rotation_degrees < 360:
+#			quadrant = Q4
+#		elif rotation_degrees < 0 and rotation_degrees > -90:
+#			quadrant = Q4
+#		elif rotation_degrees < -90 and rotation_degrees > -180:
+#			quadrant = Q3
+#		elif rotation_degrees < -180 and rotation_degrees > -270:
+#			quadrant = Q2
+#		elif rotation_degrees < -270 and rotation_degrees > -360:
+#			quadrant = Q1
+
 func checking_quadrant():
-	match quadrant:
-		Q1:
-			GunSprite.flip_v = false
-		Q2:
-			GunSprite.flip_v = true
-		Q3:
-			GunSprite.flip_v  = true
-		Q4:
-			GunSprite.flip_v = false		
-	
+#	print (sin(rotation_degrees/180)
 	if enemy != null:
-		if rotation_degrees > 0  and rotation_degrees < 90:
-			quadrant = Q1
-		elif rotation_degrees > 90 and rotation_degrees < 180:
-			quadrant = Q2
-		elif rotation_degrees > 180 and rotation_degrees < 270:
-			quadrant = Q3
-		elif rotation_degrees > 270 and rotation_degrees < 360:
-			quadrant = Q4
-		elif rotation_degrees < 0 and rotation_degrees > -90:
-			quadrant = Q4
-		elif rotation_degrees < -90 and rotation_degrees > -180:
-			quadrant = Q3
-		elif rotation_degrees < -180 and rotation_degrees > -270:
-			quadrant = Q2
-		elif rotation_degrees < -270 and rotation_degrees > -360:
-			quadrant = Q1
-			
+		var position_enemy = (enemy.global_position.x - global_position.x)
+		print (position_enemy)
+		if position_enemy > 0 :
+			GunSprite.flip_v = false
+		elif position_enemy < 0:
+			GunSprite.flip_v = true
+
 	#mengeflip gunsprite waktu player berjalan ke kiri atau ke kanan
 	elif enemy == null:
 		if Input.is_action_pressed("ui_left"):
 			rotation_degrees = 180
-			quadrant = Q3
-			
+			GunSprite.flip_v = true
+
 		elif Input.is_action_pressed("ui_right"):
 			rotation_degrees = 0
-			quadrant = Q1
-	else :
-		quadrant = Q1
-		rotation_degrees = 0
+			GunSprite.flip_v = false
+#	else :
+##		quadrant = Q1
+#		rotation_degrees = 0
 	
 	#mengeflip gunsprite waktu player berjalan ke kiri atau ke kanan
 #	if Input.is_action_just_pressed("ui_left") && enemy == null:

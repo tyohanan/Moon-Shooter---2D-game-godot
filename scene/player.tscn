@@ -1,8 +1,10 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://Assets/2. player.png" type="Texture" id=1]
 [ext_resource path="res://script/player.gd" type="Script" id=2]
 [ext_resource path="res://Assets/4. medium shadow.png" type="Texture" id=3]
+[ext_resource path="res://scene/StatsHealth.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scene/Hurtbox.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scene/Gun and Power/GunPivotPlayer.tscn" type="PackedScene" id=6]
 
 [sub_resource type="CapsuleShape2D" id=1]
@@ -343,5 +345,9 @@ active = true
 parameters/playback = SubResource( 24 )
 parameters/Idle/blend_position = Vector2( -0.0875986, -0.44185 )
 parameters/Run/blend_position = Vector2( -0.0652329, 0.471908 )
+
+[node name="Hurtbox" parent="." instance=ExtResource( 5 )]
+
+[node name="StatsHealth" parent="." instance=ExtResource( 4 )]
 
 [editable path="GunPivot"]
